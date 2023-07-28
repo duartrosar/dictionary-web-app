@@ -1,11 +1,18 @@
 "use client";
 
-import React, { useState, useRef, MouseEvent as ReactMouseEvent } from "react";
+import React, {
+  useState,
+  useContext,
+  useRef,
+  MouseEvent as ReactMouseEvent,
+} from "react";
 import { IoChevronDownSharp, IoCheckmarkSharp } from "react-icons/io5";
 import { useClickAway } from "react-use";
+import FontContext from "./FontContext";
 
 const Dropdown = () => {
-  const [selectedText, setSelectedText] = useState("");
+  const { selectedText, setSelectedText } = useContext(FontContext);
+  //   const [selectedText, setSelectedText] = useState("");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
