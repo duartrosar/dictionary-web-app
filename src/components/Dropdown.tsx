@@ -53,26 +53,26 @@ const Dropdown = () => {
       {dropdownOpen && (
         <div
           ref={dropdownRef}
-          className="absolute left-0 z-50 w-full bg-white border rounded-lg shadow-md dark:bg-dark-700 border-dark-300 top-8 dark:border-dark-500"
+          className="absolute left-0 z-50 bg-white shadow-lg dark:shadow-dark-800/50 rounded-2xl dark:bg-dark-700 top-8 dark:border-dark-500"
         >
-          <ul className="flex flex-col gap">
+          <ul className="flex flex-col gap-4 py-6 pl-6 pr-[70px] text-lg">
             <li
               onClick={(e) => handleClick(e)}
-              className="flex items-center justify-between w-full px-4 text-sm font-bold leading-6 transition cursor-pointer hover:bg-dark-200 dark:hover:bg-dark-600 hover:shadow-md"
+              className="flex items-center justify-between w-full text-sm font-bold leading-6 transition cursor-pointer font-inter hover:text-primary whitespace-nowrap font"
             >
               Sans Serif
             </li>
             <li
               onClick={(e) => handleClick(e)}
-              className="flex items-center justify-between w-full px-4 text-sm font-bold leading-6 transition cursor-pointer hover:bg-dark-200 dark:hover:bg-dark-600 hover:shadow-md"
+              className="flex items-center justify-between w-full text-sm font-bold leading-6 transition cursor-pointer font-lora hover:text-primary"
             >
               Serif
             </li>
             <li
               onClick={(e) => handleClick(e)}
-              className="flex items-center justify-between w-full px-4 text-sm font-bold leading-6 transition cursor-pointer hover:bg-dark-200 dark:hover:bg-dark-600 hover:shadow-md"
+              className="flex items-center justify-between w-full text-sm font-bold leading-6 transition cursor-pointer font-inconsolata hover:text-primary"
             >
-              Monospace
+              Mono
             </li>
           </ul>
         </div>

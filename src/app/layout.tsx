@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inconsolata, Inter, Lora } from "next/font/google";
 import Providers from "./providers";
+import SearchBar from "@/components/SearchBar";
 
 const inter = Inter({ subsets: ["latin"] });
 const lora = Lora({ subsets: ["latin"] });
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body>
         <Providers>
           <Navbar />
+          <SearchBar />
           {children}
         </Providers>
       </body>

@@ -3,22 +3,24 @@ import Image from "next/image";
 import play from "../../public/icon-play.svg";
 import newWindow from "../../public/icon-new-window.svg";
 import Link from "next/link";
+import { Definition } from "@/types/Definition";
 
-const Word = () => {
+const Word = ({ definition }: { definition: Definition }) => {
   return (
     <>
       <div className="w-full px-6 md:px-10">
         <div className="flex items-center justify-between mx-auto max-w-[736px]">
           <div className="mt-6 md:mt-[43px]">
             <h1 className="font-bold text-[32px] text-dark-600 md:text-[64px] dark:text-white">
-              keyboard
+              {definition.word}
             </h1>
             <h2 className="mt-2 text-lg text-primary md:text-2xl">
-              /ˈkiːbɔːd/
+              {definition.phonetics[0].text}
             </h2>
           </div>
           <button>
             <Image src={play} alt="play-button" className="w-12 md:w-[75px]" />
+            {/* <audio controls src={definition.phonetics[0].audio}></audio> */}
           </button>
         </div>
         <div className="flex items-center mt-8 md:mt-10 mx-auto max-w-[736px] gap-4 md:gap-5">
