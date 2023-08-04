@@ -8,8 +8,6 @@ const SearchPage = async ({ params }: { params: { word: string } }) => {
   const decodedWord = decodeURI(params.word);
   const wordDefinition: WordDefinition = await getDefinition(decodedWord);
 
-  console.log(wordDefinition);
-
   return <Word wordDefinition={wordDefinition} />;
 };
 

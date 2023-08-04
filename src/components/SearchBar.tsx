@@ -50,7 +50,7 @@ const SearchBar = () => {
             size={20}
           />
           {error && (
-            <p className="absolute mt-2 text-xl text-secondary">
+            <p className="absolute md:mt-2 md:text-xl text-secondary">
               Whoops, can't be empty...
             </p>
           )}

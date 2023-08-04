@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import play from "../../public/icon-play.svg";
 import newWindow from "../../public/icon-new-window.svg";
 import Link from "next/link";
 import Meaning from "./Meaning";
+import { Player } from "./Player";
 // import { Definition } from "@/types/Definition";
 
 const Word = ({ wordDefinition }: { wordDefinition: WordDefinition }) => {
@@ -22,13 +22,7 @@ const Word = ({ wordDefinition }: { wordDefinition: WordDefinition }) => {
             )}
           </div>
           {wordDefinition.phonetics[0] && (
-            <button>
-              <Image
-                src={play}
-                alt="play-button"
-                className="w-12 md:w-[75px]"
-              />
-            </button>
+            <Player source={wordDefinition.phonetics[0].audio} />
           )}
         </div>
         {wordDefinition.meanings.map((meaning, index) => (
